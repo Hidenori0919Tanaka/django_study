@@ -1,5 +1,5 @@
 # Docker Hubにあるpythonイメージをベースにする
-FROM python:3.6-alpine
+FROM python:3
 
 # 環境変数を設定する
 ENV PYTHONUNBUFFERED 1
@@ -8,6 +8,7 @@ ENV PYTHONUNBUFFERED 1
 RUN mkdir /code
 WORKDIR /code
 
+RUN pip install --upgrade pip
 # ホストPCにあるrequirements.txtをコンテナ内のcodeディレクトリにコピーする
 # コピーしたrequirements.txtを使ってパッケージをインストールする
 ADD requirements.txt /code/
