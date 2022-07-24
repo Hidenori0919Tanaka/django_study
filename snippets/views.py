@@ -5,8 +5,6 @@ from django.http import HttpResponse
 from snippets.forms import SnippetForm
 from snippets.models import Snippet
 
-# Create your views here.
-
 
 def top(request):
     snippets = Snippet.objects.all()

@@ -3,7 +3,9 @@ beautifulsoup4==4.11.1
 certifi==2022.5.18.1
 distlib==0.3.4
 Django==3.2
-filelock==3.7.0
+django-bootstrap5==21.3
+django-pygments-renderer==0.0.1
+filelock==3.7.1
 pipenv==2022.5.2
 platformdirs==2.5.2
 psycopg2==2.9.3
