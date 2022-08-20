@@ -17,3 +17,18 @@ services:
     command: python3 manage.py runserver 0.0.0.0:8000
     depends_on:
     - db
+  
+  pgadmin4:
+    image: dpage/pgadmin4
+    ports:
+        - 8888:80
+    volumes:
+        - pgadmin4_data:/var/lib/pgadmin
+    environment:
+        PGADMIN_DEFAULT_EMAIL: hoge@gmail.com
+        PGADMIN_DEFAULT_PASSWORD: password
+    depends_on:
+      - db
+  
+volumes:
+  pgadmin4_data:
