@@ -46,3 +46,9 @@ def snippet_detail(request, snippet_id):
     snippet = get_object_or_404(Snippet, pk=snippet_id)
     return render(request, 'snippets/snippet_detail.html',
                   {'snippet': snippet})
+
+
+# def comment_new(request, snippet_id):
+#     snippet = get_object_or_404(Snippet, pk=snippet_id)
+#     return render(request, 'snippets/comments/snippet_detail.html',
+#                   {'snippet': snippet})
